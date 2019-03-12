@@ -21,8 +21,11 @@ bool isEmptyQ(const Queue *Q)
 
 void enqueueQ(Queue *Q, int content)
 {
-
-Q->front=content;
+	if(Q->size < Q->capacity){
+		Q->rear = (Q->rear+1) % Q->capacity;
+		Q->elements[Q->rear] = content;
+		Q->size = Q->size+1;
+	}
 }
 
 int dequeueQ(Queue *Q)
