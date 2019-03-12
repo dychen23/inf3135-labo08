@@ -30,7 +30,15 @@ void enqueueQ(Queue *Q, int content)
 
 int dequeueQ(Queue *Q)
 {
-return 0;
+{  
+    if (isEmpty(Q)){  
+        return 1;  
+    }
+    int content = queue->element[queue->front];  
+    queue->front = (queue->front + 1) % queue->capacity;  
+    queue->size = queue->size - 1;  
+    return content;  
+
 }
 
 int frontQ(Queue *Q)
