@@ -12,12 +12,14 @@ Queue createQ(const int capacity)
 
 bool isEmptyQ(const Queue *Q)
 {
+return Q == NULL;
 
 }
 
 void enqueueQ(Queue *Q, int content)
 {
 
+Q->front=content;
 }
 
 int dequeueQ(Queue *Q)
