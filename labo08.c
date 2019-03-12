@@ -9,8 +9,10 @@
 
 int main(int argc, char *argv[])
 {
-   // Testez Queue ici.
+ 
+   Queue q = createQ(5); 
 
+	if(isEmptyQ(&q)) printf("est vide\n");
 
    return 0;
 }

@@ -7,13 +7,16 @@
 Queue createQ(const int capacity)
 {
    Queue Q;
+   
+  Q.capacity = capacity;
+  Q.size = 0;
+
    return Q;
 }
 
 bool isEmptyQ(const Queue *Q)
 {
-return Q == NULL;
-
+	return (Q->size == 0); 
 }
 
 void enqueueQ(Queue *Q, int content)
